@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>Big</title>
+  <style>
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+  <link href="big.css" rel="stylesheet" type="text/css" />
+  <link href="themes/brutalist-2.css" rel="stylesheet" type="text/css" />
+  <script src="js/index-citations-global.js"></script>
+  <script>
+    function run() {
+      IndexCitations({
+        referenceId: "#citations",
+      });
+
+      const citations = document.querySelectorAll(".citationLink");
+      // TODO: update this to be the last slide whenever you make it
+      citations.forEach((citation) => (citation.href = "#53"));
+
+      const ref = document.querySelectorAll("#citations cite");
+
+      ref.forEach((reference) => {
+        var el = document.createElement("span");
+        el.innerHTML = '<a href="javascript:history.back()">&#8627;</a>';
+        insertAfter(reference, el);
+      });
+    }
+
+    if (document.readyState != "loading") {
+      run();
+    } else {
+      document.addEventListener("DOMContentLoaded", run);
+    }
+
+    function insertAfter(referenceNode, newNode) {
+      referenceNode.parentNode.insertBefore(
+        newNode,
+        referenceNode.nextSibling
+      );
+    }
+  </script>
+  <script src="big.js"></script>
+  <script src="js/lazysizes.min.js"></script>
+
+</head>
+
+<body class="light">
+
+  <!-- Title slide  -->
+  <div class="layout"
+    style="grid-template-rows: repeat(5, minmax(0, 1fr)); grid-template-columns: repeat(6, 1fr); gap: 10px; height: 100vh;">
+    <!-- Main title -->
+    <div style="grid-row: 1 / 2; grid-column: 1 / 7;">
+      RESEARCH <br> AND CREATIVE WORK
+    </div>
+
+    <!-- Subtitle -->
+    <!-- <div style="grid-row: 1 / 2; grid-column: 5 / 7;">2024</div> -->
+
+    <!-- Description text -->
+    <div style="grid-row: 3; grid-column: 2 / 6;"><span class="underline">From Participatory Mobile Music to
+        Locative Sound Art</span></div>
+
+    <!-- Author/presenter info -->
+    <div style="grid-row: 5; grid-column: 1 / 4;">Tate Carson</div>
+    <div style="grid-row: 5; grid-column: 4 / 7;">Assistant Professor of Digital Sound Design</div>
+    <notes>
+      Introduction; mobile music and locative sound art with smartphones.
+
+    </notes>
+  </div>
+
+  <div
+    style="display: grid; grid-template-rows: repeat(6, 1fr); grid-template-columns: repeat(6, 1fr); gap: 5px; height:100vh ">
+    <!-- Main title that establishes the topic -->
+    <div style="grid-row: 1 / 3; grid-column: 1 / 7;">THE SMARTPHONE AS ARTISTIC PLATFORM</div>
+
+    <!-- Core aspects in a structured layout -->
+    <div style="grid-row: 3 / 4; grid-column: 2 / 4;"><span class="border">UBIQUITY</span></div>
+    <div class="underline" style="grid-row: 3 / 4; grid-column: 6 / 7;">Open access</div>
+
+    <div style="grid-row: 4 / 5; grid-column: 1 / 3;"><span class="border">SENSORS</span></div>
+    <div class="underline" style="grid-row: 4 / 5; grid-column: 4 / 8;">GPS, gyroscope, microphone integration</div>
+
+    <div style="grid-row: 5 / 6; grid-column: 2 / 4;"><span class="border">NETWORKS</span></div>
+    <div class="underline" style="grid-row: 5 / 6; grid-column: 5 / 8;">Distributed and collaborative music-making</div>
+
+    <!-- Bottom row emphasizing the broader impact -->
+    <div style="grid-row: 6 / 7; grid-column: 1 / 7;">Transforming our relationship with sound, environment, and
+      technology</div>
+
+    <notes>
+      * A few things that make smartphones particularly interesting for music and sound art are their ubiquity, many
+      people already have one in their pocket, the sensors that come with them, like GPS, gyroscope, and microphone, and
+      the networks that they can connect to, allowing for the creation of collaborative digital musical experiences.
+
+      * These features allow for new ways of creating and experiencing music, and can transform our relationship with
+      sound, environment, and technology.
+    </notes>
+  </div>
+
+  <div class="layout" style="grid-template-rows: repeat(6, 1fr); grid-template-columns: repeat(8, 1fr); gap: 10px;">
+    <div style="grid-row: 1 / 2; grid-column: 1 / 5;"><span class="underline">And the water receded</span></div>
+    <div style="grid-row: 1 / 2; grid-column: 6;"><span class="border">2017</span></div>
+
+    <!-- Second work aligned with the first for temporal connection -->
+    <div style="grid-row: 2 / 3; grid-column: 4/7;"><span class="underline">A more perfect union</span></div>
+    <div style="grid-row: 2 / 3; grid-column: 8;"><span class="border">2017</span></div>
+
+    <div style="grid-row: 3; grid-column: 2 / 4;"><span class="underline">Mesh Garden</span></div>
+    <div style="grid-row: 3; grid-column: 6;"><span class="border">2018</span></div>
+
+    <!-- Middle period work spans wider, suggesting its duration -->
+    <div style="grid-row: 4; grid-column: 1 / 4;"><span class="underline">Sounds Aware</span></div>
+    <div style="grid-row: 4; grid-column: 4 / 7;"><span class="border">2019-2021</span></div>
+
+    <!-- Recent works create dynamic tension through positioning -->
+    <div style="grid-row: 5; grid-column: 3 / 6;"><span class="underline">immaterial.cloud</span></div>
+    <div style="grid-row: 5; grid-column: 8;"><span class="border">2020</span></div>
+
+    <!-- Latest work emphasized through full width -->
+    <div style="grid-row: 6; grid-column: 2 / 5;"><span class="underline">Resonant Landscapes</span></div>
+    <div style="grid-row: 6; grid-column: 6 / 8;"><span class="border">2023-2024</span></div>
+
+    <notes>
+      * I'll give an overview of the progression of my work over the past few years, starting with And the water receded
+      in 2017, then moving on to A more perfect union, Mesh Garden, Sounds Aware, immaterial.cloud, and finally Resonant
+      Landscapes.
+
+      * These works have explored different aspects of mobile music and locative sound art, and have built on
+      each other to create a body of work that explores the potential of the smartphone as an artistic platform.
+    </notes>
+  </div>
+
+
+
+  <div class="layout"
+    style="grid-template-rows: repeat(6, minmax(0, 1fr)); grid-template-columns: repeat(6, 1fr); gap: 0px;">
+    <!-- Primary title section takes full width at top with strong presence -->
+    <div style="grid-row: 1 / 2; grid-column: 1 / 5;">
+      <span class="underline">
+        And the water receded
+
+      </span>
+
+    </div>
+    <div style="grid-row: 1 / 2; grid-column: 7;">
+      <span class="year">
+        2017
+
+      </span>
+    </div>
+
+    <!-- Core concept gets prominent secondary position -->
+    <div style="grid-row: 2 / 3; grid-column: 2 / 6;">Sonification of Hurricane Katrina</div>
+
+    <div style="grid-row: 3/6; grid-column:5/7">
+      <img src="images/and-the-water.jpg" alt="">
+    </div>
+    <!-- Tools section header -->
+    <!-- <div style="grid-row: 3 / 4; grid-column: 1 / 3;">Tools</div> -->
+
+    <!-- Tools list indented and stacked -->
+    <div style="grid-row: 4 / 6; grid-column: 2 / 5;">
+      Networked Animated Notation
+    </div>
+
+    <div style="grid-row: 6 / 7; grid-column: 4 / 8;">Stepping Stone to Participatory Works &#8594;</div>
+    <notes>
+      And the water receded was a response to the devastation of Hurricane Katrina, and explored the use of smartphones
+      as a platform for creating and experiencing music. The work used smartphone-based animated notation, and was a
+      stepping stone to the participatory works that
+      followed. It opened up the possibility to use the smartphone not only as a tool for delivering notation, but as an
+      instrument in itself.
+    </notes>
+  </div>
+
+  <div>
+    <iframe class="responsive-iframe lazyload" src="https://www.youtube.com/embed/es_4M9t9K-4?si=1psU33t4fD6FsvEw"
+      title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="layout"
+    style="grid-template-rows: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(6, 1fr); gap: 10px;">
+    <!-- Large hero image takes up most of the left side -->
+    <div style="grid-row: 1 / 4; grid-column: 1 / 4;">
+      <img src="images/ampu.png" />
+    </div>
+
+    <!-- Title and descriptive text on the right -->
+    <div style="grid-row: 1 / 2; grid-column: 4 / 7;">
+      <span class="underline">A more perfect union</span>
+    </div>
+
+    <!-- Exhibition details -->
+    <div style="grid-row: 3 / 4; grid-column: 4 / 7;">
+      Direct Audience Control
+    </div>
+
+    <!-- Footer information spans full width -->
+    <div style="grid-row: 4 / 5; grid-column: 1 / 3;">
+      <span class="year">2017</span>
+    </div>
+    <div style="grid-row: 4 / 5; grid-column: 3 / 7;">
+      Smartphone Speaker Array
+    </div>
+
+    <notes>
+      A More Perfect Union was conceived as a direct response to the limitations of And the Water Receded, exploring
+      innovative approaches to creating and experiencing music on smartphones. Utilizing a smartphone speaker array, the
+      work provided an immersive and interactive experience for the audience, serving as a precursor to subsequent
+      participatory compositions. Guided by audience evaluations, melodies evolved through a genetic algorithm,
+      ultimately culminating in an emergent sound that reflected collective preferences.
+    </notes>
+  </div>
+
+  <div>
+    <iframe title="vimeo-player" class="responsive-iframe lazyload" src="https://player.vimeo.com/video/267062963"
+      frameborder="0" allowfullscreen></iframe>
+    <notes>This is a performance version of the work that took place at LSU Museum
+      of Art on March 4, 2018</notes>
+  </div>
+
+  <div>
+    <div>Audience participation</div>
+    <notes>I wanted to create a work that went beyond the idea of audience
+      participation by making the audience the sole creators of the work. Here
+      there is no audience performer divide, every participant is both the
+      audience and performer. The participants don't need any special skill to
+      be involved, they simply feed their preferences into the algorithm by
+      listening or skipping a melody. They don't need to know how the piece
+      works to appreciate its development.
+    </notes>
+  </div>
+  <div class="layout" style="grid-template-rows: 75% 25%">
+    <img src="./images/amoreperfectunion/League_FtM_perf.jpg" alt="" />
+
+    <div>
+      The League of Automatic Music Composers (Perkis, Horton, and Bischoff,
+      left to right) performing at Ft. Mason, San Francisco 1981.
+      <br />
+    </div>
+    <em> photo: Peter Abramowitsch </em>
+
+    <notes>A precursor to this concept of distributed control of a composition can
+      be found in the early computer networked music groups The League of
+      Automatic Music Composers and later The Hub. They created networks of
+      computers that would send messages to other computers to create a rich
+      texture of evolving sounds.
+    </notes>
+  </div>
+  <div>
+    <img src="./images/amoreperfectunion/sims-galapagos.jpg" alt="an image of Karl Sims' Galapagos installation" />
+
+    <div>Karl Sims' Galapagos (1997)</div>
+    <em class="nowrap">photo: OHTAKA Takashi</em>
+    <notes>
+      Another important conceptual precursor to the work is Karl Sims' 1997
+      installation Galapagos. Sims' work consisted of several video screens,
+      each displaying a different virtual organism. The installation allowed
+      spectators to take part in evolving virtual organisms by choosing the
+      amount of time they spent in front of one video screen versus another.
+      The longer a viewer stood in front of a screen, the more he increased
+      the fitness of that virtual organism, and made it more likely for the
+      organism to pass its traits onto the next generation.
+    </notes>
+  </div>
+
+  <div>
+    Technical Design
+    <ul>
+      <li>Controller webpage</li>
+      <li>Server backend</li>
+      <li>Audience webpage</li>
+    </ul>
+
+    <notes>The technical design of A more perfect union consists of three parts:
+      the controller webpage, the audience webpage and genetic algorithm, and
+      the server that connects the audience members' devices.
+
+      <br />
+      When an audience member stops a melody, the fitness function of that
+      melody is transmitted to all other audience members using Rhizome.
+      Amazon EC25, a cloud computing service, hosts the webpages and server.
+      Cloud computing is a cheaper alternative to traditional hosting
+      solutions because the hosting cost is based on time used during a
+      performance.
+
+      <br />
+
+      The controller webpage has buttons for starting and stopping the work.
+      There is a box to type in a duration for the performance, which allows
+      the controller to vary the running time for different performances.
+
+      <br />
+      The audience webpage is where the sound generation happens.
+    </notes>
+  </div>
+
+  <div class="layout" style="
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+          ">
+    <div style="grid-area: 1 / 1 / 3 / 6; justify-content: center">
+      <h1>Audience page</h1>
+    </div>
+    <div style="grid-area: 3 / 1 / 6 / 3">
+      <img src="images/amoreperfectunion/phone1.jpg" width="100%" alt="" />
+    </div>
+    <div style="grid-area: 3 / 3 / 6 / 5">
+      <ul>
+        <li>Sound generation - Web Audio API with Tone.js</li>
+        <li>User interface - NexusUI</li>
+        <li>Visualizations - p5.js</li>
+      </ul>
+    </div>
+
+    <notes>
+      When an audience member reaches the audience webpage, Tone.js, a
+      JavaScript framework for working with the Web Audio API, downloads and
+      prepares samples. The audience members control the starting and stopping
+      of sounds with a toggle switch from the interface library NexusUI. Each
+      sound is accompanied by a visualization of the melody currently being
+      heard; p5.js, a drawing library, displays the visualization.
+    </notes>
+  </div>
+
+  <div>
+    Conclusions - What did I learn?
+    <ul>
+      <li>
+        The inner workings of the genetic algorithm are opaque to the
+        participants, more visualization could help.
+      </li>
+      <li>The work might be better as an installation.</li>
+      <li>No centralized database makes it difficult to keep state.</li>
+      <li>
+        There are more creative possibilities with rhythmic synchronization.
+      </li>
+    </ul>
+  </div>
+
+  <div class="layout"
+    style="display: grid; grid-template-rows: repeat(4, 1fr); grid-template-columns: repeat(6, 1fr); gap: 10px;">
+    <!-- Central image -->
+    <div style="grid-row: 2 / 4; grid-column: 2 / 5;">
+      <img src="images/mesh-garden-2.png" style="width: 100%; height: 100%;" alt="Featured image" />
+    </div>
+
+    <!-- Surrounding text -->
+    <div style="grid-row: 1 / 2; grid-column: 1 / 7;"><span class="underline">Mesh Garden</span></div>
+    <div style="grid-row: 2 / 4; grid-column: 1 / 2;"><span class="year">2018</span></div>
+    <div style="grid-row: 2 / 4; grid-column: 5 / 7;">Musical Game</div>
+    <div style="grid-row: 4 / 5; grid-column: 1 / 3;">Gyroscope</div>
+    <div style="grid-row: 4 / 5; grid-column: 5 / 7;">Party Music</div>
+
+    <notes>
+      After A More Perfect Union, I sought to explore composing for spaces beyond the concert hall, leading to the
+      creation of
+      Mesh Garden, a musical game that expanded on the smartphone's potential as a platform for creating and
+      experiencing
+      music. Utilizing smartphone gyroscopes, the work offered an interactive and immersive experience, designed
+      specifically
+      for parties and other social gatherings.
+    </notes>
+  </div>
+
+  <div>
+    <iframe class="responsive-iframe azyload" src="https://www.youtube.com/embed/_WQHdGdvO2E" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+
+    <notes>
+      The work also has a gameplay aspect; if two players' phones match in
+      orientation, one player has the option to take the other player's note,
+      building up a bank of notes that will be used to form a melody.
+      <br />
+    </notes>
+  </div>
+
+  <div>
+    <img src="images/mesh-garden/Guitar-GH3-hammeron.0.webp" alt="" />
+    <div>Guitar Hero</div>
+    <div class="credit">
+      <em> Photo: </em>
+      <a href="https://polygon.com">polygon.com</a>
+    </div>
+    <notes>
+      You may think that this sounds similar to games like Guitar Hero but
+      that would be considered mimicry, the object being recreation of music
+      not the creation of something new. Thomas Studley gives a definition of
+      creative-based musical games that requires the games to create some sort
+      of new music, not just mimic as in karaoke.
+    </notes>
+  </div>
+  <div class="layout" style="grid-template-rows: 75% 25%">
+    <img src="images/mesh-garden/instantcity_play.jpg" alt="" />
+    <div>
+      <div style="font-size: 1.5em">Instant City (2003-2006)</div>
+      <div class="credit">
+        <em>Photo:</em>
+        <a
+          href="http://www.hauert-reichmuth.ch/en/projekte/instant-city/">http://www.hauert-reichmuth.ch/en/projekte/instant-city/</a>
+      </div>
+    </div>
+    <notes>Many music games exist that fulfill all or part of Studley's definition
+      for creative-based music games. Instant City1 is a music-building table
+      game created by Sibylle Hauert and Daniel Reichmuth in collaboration
+      with Volker Bohm. Players stack blocks on top of each other to create
+      music. Mesh Garden is inspired by the ambient gameplay aspect of this
+      work. Instant City has no specific gameplay or aesthetic goal; the
+      gameplay mode is exploratory. While being an impressive project, it is
+      not very accessible as it requires a unique light table to read where
+      the blocks are positioned.
+    </notes>
+  </div>
+
+  <div>
+    <img src="images/mesh-garden/Reactable_Multitouch.jpg" width="1000px""
+      alt="" />
+      <div>
+        reacTable - Music Technology Group - Universitat Pompeu Fabra in
+        Barcelona, Spain
+      </div>
+      <div><em>Photo: Daniel Williams</em></div>
+      <notes>
+        The reacTable[7] is another inspiration for Mesh Garden. It is an
+        instrument with a tabletop user interface that allows players to create
+        music by moving physical objects on top of a screen to manipulate
+        musical parameters. Again, the non- portability of the table interface
+        renders this inaccessible to a large group of people. The intention with
+        Mesh Garden is to create something similar to these pieces, but using
+        the all-pervasive and accessible smartphone.
+      </notes>
+    </div>
+    <div>
+      <div>Interactions</div>
+
+      <notes>
+        The interactions of Mesh Garden are designed to be intuitive for a
+        non-musically trained player to use. Using the smartphone's compass, the
+        piece allows the player to interact with the sounds. A player interacts
+        by turning their phone, which affects two different parts of the work.
+      </notes>
+    </div>
+    <div class=" layout" style="grid-template-rows: 75% 25%">
+    <img src="images/mesh-garden/mesh garden player interaction.jpg" alt="" />
+    <div>Relative axis compass interaction</div>
+    <notes>
+      <br />
+      One aspect is turning on the relative axis. When the player logs on,
+      their forward-facing position is registered to be zero degrees, which
+      will produce the default sounds. Then, by turning the phone 90 degrees,
+      180 degrees, and 270 degrees, the player can pick between four different
+      pre- determined note options and rhythmic options made up of four
+      different Euclidian rhythmic patterns. The rhythmic patterns are
+      randomized for each player when they log on, but do not change after
+      this point. Therefore, the player should be able to tell one pattern
+      from another and use their musical intuition to choose the pattern that
+      best ts musically.
+      <br />
+      To control the long bowed sound, the player can decide what order the
+      line is played through. The choices are up, down, drunk, and random. The
+      rhythm is based on the same Euclidian rhythms that determine onsets.
+    </notes>
+  </div>
+
+  <div class="layout" style="grid-template-rows: 75% 25%">
+    <img src="images/mesh-garden/matching.jpg" alt="" />
+    <div>Compass heading matching</div>
+    <notes>
+      The more active game play aspect of Mesh Garden is the compass heading
+      matching feature. When a player matches with the headings of another
+      player, the player that was moving last plays an unsynchronized melody.
+      To tell if two phones are facing towards each other, the compass head-
+      ings are compared. The absolute compass values are used instead of the
+      relative orientation data of the other section. Each phone's heading is
+      determined using the kompas npm library, then each heading is sent to
+      the server. On the server, the headings are continually compared with
+      each other. If the dierence between one player's head- ing and another's
+      is 180 degrees, then the phones are facing each other. Once a match is
+      found between two phones, a sound plays on one of the phones. The sound
+      is one note of a melody that comes from a bank of pre-selected notes.
+      This player then has the chance to take the note of the phone it matched
+      with and add that note to its bank of notes. The phone that lost its
+      note can then try to match with other phones to add their notes and
+      build up its own melody. Since notes only get traded back and forth be-
+      tween phones, they are never totally lost, rendering more of a creative
+      orchestration between distributed devices.
+    </notes>
+  </div>
+  <div>
+    <div>Rhythmic synchronization with Ableton Link</div>
+
+    <notes>
+      Link is a technology developed by Ableton that allows any computers
+      running Live to play in sync with each other. Because Link is open
+      sourced, it is possible to use it in non- Live applications [2]. The
+      Link API is in C++, a language not suitable for the web; so, to run Link
+      in the web, I had to use a Node.js port, node-abletonlink, created by
+      GitHub user 2bbb. This project ports the C++ Link implementation to
+      Node.js to allow its use in the browser. Because of platform specific
+      installation issues, Docker was needed to deploy Mesh Garden to a Linux
+      server. I used Docker to ensure that the development and deployment
+      environment were identical. By default, node-ableton link provides time
+      based synchronization between devices but does not ensure that the
+      synchronization is in metrical, musical time. Notes will all play at the
+      same time, but the tempo will fluctuate due to network latency. To x
+      this problem, I use the Trans- port system in Tone.js. When a player
+      joins Mesh Garden, their device's rhythmic transport starts, giving
+      their device a musically metronomic time clock. When a new player logs
+      on, the system stops each of the other players trans- ports and then
+      immediately restarts them, ensuring that all players stay in sync. I
+      also use metrical quantization of time values in Tone.js to ensure that
+      metronomic variation will be smoothed out by quantization on a
+      synchronized clock. Used together, these methods create a successful
+      distributed sequencer that works even with devices on separate networks.
+    </notes>
+  </div>
+  <div>
+    <div>What did I learn?</div>
+    <div>
+      <ul>
+        <li>Synchronization is difficult but useful</li>
+        <li>Game dynamics open possibilities for participation</li>
+        <li>
+          Creating an avenue for players with greater music skill levels will
+          take more advances in user interface design
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sounds Aware -->
+  <div class="layout"
+    style="grid-template-rows: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(6, 1fr); gap: 10px;">
+    <!-- Large hero image takes up most of the left side -->
+
+    <!-- Title and descriptive text on the right -->
+    <div style="grid-row: 1 / 2; grid-column: 1 / 4;">
+      <span class="underline">Sounds Aware</span>
+    </div>
+
+    <!-- Exhibition details -->
+    <div style="grid-row: 3 / 4; grid-column: 1/4;">
+      Locative Audio Sound Art
+    </div>
+
+    <div style="grid-row: 1 / 4; grid-column: 4/ 7;">
+      <img src="images/sounds-aware.png" />
+    </div>
+
+
+    <!-- Footer information spans full width -->
+    <div style="grid-row: 4 / 5; grid-column: 1 / 3;">
+      <span class="year">2019 — 2021</span>
+    </div>
+    <div style="grid-row: 4 / 5; grid-column: 3 / 7;">
+      An app for sharing sound walks
+    </div>
+
+    <notes>
+      After Mesh Garden, I became interested in leveraging the mobility of smartphones to create experiences designed
+      for
+      outdoor environments and walking. This led to Sounds Aware, a locative audio sound art project that fostered a
+      shared
+      experience of the environment through sound. Developed as an app, the project enabled users to share sound walks,
+      creating a collective soundscape that reflected the diversity of their surroundings. Running from 2019 to 2021,
+      Sounds
+      Aware explored the potential of locative audio as a medium for crafting shared environmental experiences.
+    </notes>
+  </div>
+
+  <div>
+    <blockquote>
+      <p>
+        To what extent might the technologies of communication, art and
+        entertainment serve as 'prostheses' that would provide us with
+        experiences of wilderness that would not only enrich our human
+        identity but help us to preserve and expand the domain of the
+        non-human world?
+      </p>
+      <cite>
+        David Dunn. Wilderness as Reentrant Form: Thoughts on the Future of
+        Electronic Art and Nature. Leonardo, (4):377, 1988.
+      </cite>
+    </blockquote>
+    <div>- David Dunn</div>
+
+    <notes> Composer David Dunn poses an inspirational question: </notes>
+  </div>
+  <div>
+    A goal of Sounds Aware is to shift attention to geophonic and biophonic
+    soundscape away from the anthrophonony.
+
+    <notes>
+      The goal of Sounds Aware is to bring the user’s awareness to the
+      geophonic and biophonic soundscape, which is often so masked by noise
+      pollution that it has fallen out of awareness for many of us. Sounds
+      Aware seeks to shift the user’s concept of nature to something that has
+      no starting or end- ing point; it is all around us. The app brings
+      awareness by focusing attention on the environment. Because of the pre-
+      dominance of eye culture [3], our reliance on seeing rather than
+      listening as a primary means of sensing the world, it is a lot to ask of
+      a person who might be uninterested in acoustic ecology to “just listen”
+      to their environment. But, if you give them a tool that urges listening
+      in the quieter places, where the natural world will be more audible,
+      there is a better chance of them engaging with those sounds because the
+      app focused their perception. Sounds Aware is a means of technologically
+      mediated “ear cleaning,” as described by R. Murray Schafer in Ear
+      Cleaning: Notes for an Experimental Music Course [13].
+    </notes>
+  </div>
+  <div>
+    <div>Noise Pollution</div>
+    <div>
+      <ul>
+        <li>
+          There is overwhelming evidence that exposure to environmental noise
+          has adverse effects on the health of the population.<cite>World Health Organization, Burden of disease from
+            environmental
+            noise: Quantification of healthy life years lost in Europe. World
+            Health Organization. Regional Office for Europe, 2011.
+          </cite>
+        </li>
+        <li>
+          Sounds Aware will make users more aware of how much harmful noise
+          they experience in their daily lives.
+        </li>
+      </ul>
+    </div>
+    <notes>A 2011 World Health Organization (WHO) report found that “there is
+      overwhelming evidence that exposure to environmental noise has adverse
+      effects on the health of the population [10].” Sounds Aware shifts a
+      users attention away from noise pollution and to nature, which may help
+      mitigate adverse health effects caused by noise pollution.
+      <br />
+      While a reduction in environmental noise at the source would be the best
+      way to solve noise pollution, masking the noise is a stopgap solution. A
+      masking solution has been implemented by several projects [9, 15] but
+      not yet with a mobile device. Sounds Aware implements a similar idea but
+      with a mobile phone.
+    </notes>
+  </div>
+
+  <!-- immaterial.cloud -->
+  <div class="layout"
+    style="grid-template-rows: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(6, 1fr); gap: 10px;">
+    <!-- Large hero image takes up most of the left side -->
+    <div style="grid-row: 1 / 4; grid-column: 1 / 4;">
+      <img src="images/immaterial.png" />
+    </div>
+
+    <!-- Title and descriptive text on the right -->
+    <div style="grid-row: 1 / 2; grid-column: 4 / 7;">
+      <span class="underline">immaterial.cloud</span>
+    </div>
+
+    <!-- Exhibition details -->
+    <div style="grid-row: 3 / 4; grid-column: 4 / 7;">
+      Collaborative Sound Art
+    </div>
+
+    <!-- Footer information spans full width -->
+    <div style="grid-row: 4 / 5; grid-column: 1 / 3;">
+      <span class="year">2020</span>
+    </div>
+    <div style="grid-row: 4 / 5; grid-column: 3 / 7;">
+      peer-to-peer networking
+    </div>
+
+    <notes>
+      For this project, I revisited the concept of collaborative music-making with smartphones, this time exploring the
+      use of
+      the phone's camera as a trigger for changes in sound. Networked smartphones formed a temporary sound art
+      installation
+      that could be set up anywhere, activating sound by flipping phones upward to allow the camera to detect movement.
+      immaterial.cloud was a collaborative sound art project that harnessed peer-to-peer networking to create and share
+      music.
+      Designed as a collective experience, participants contributed to a shared soundscape, leveraging smartphone
+      networking
+      capabilities to facilitate a dynamic, interactive musical installation that transcended traditional boundaries of
+      time
+      and space.
+    </notes>
+  </div>
+
+  <div class="layout" style="grid-template-rows: 75% 25%">
+    <img src="images/immaterialcloud2.png" alt="immaterial.cloud" />
+    <div>Visualizations of participants interacting with the work</div>
+    <notes>
+      immaterial.cloud creates the opportunity for a shared space with
+      participants by using technology in a collective way. It requires the
+      phones to act together, and out of their hands, not as individuals as is
+      usual in this era of personalized devices. Experiencing immaterial.cloud
+      presents an opportunity for a restoration of attention that might have
+      been lost by an overuse of technology in the typical way.
+
+      <br />
+
+      The concept for immaterial.cloud emerged as a way to create a communal
+      experience during the COVID-19 shelter-in-place orders in which many
+      people have turned to the internet for communication and entertainment.
+      While social networks such as Facebook or Google seek our attention for
+      profit, [immaterial.cloud](http://immaterial.cloud) seeks a deep
+      attention that creates a shared sense of place and time for the
+      participants.
+    </notes>
+  </div>
+  <div>
+    <div>Technical Description</div>
+    <ul>
+      <li>Peer-to-peer networking</li>
+      <li>WebRTC</li>
+      <li>IPFS</li>
+      <li>Motion tracking</li>
+    </ul>
+    <notes>
+      [immaterial.cloud](http://immaterial.cloud) is a web application that
+      uses peer-to-peer technologies to send data between phones without the
+      need for an intermediary server. The [PeerJS](https://peerjs.com/)
+      library is used to manage WebRTC connections to send data between
+      phones. The application is hosted on [IPFS](https://ipfs.io/), a
+      peer-to-peer hypermedia protocol, which removes the need for centralized
+      server hosting. The participant interaction of waving a hand around in
+      front of a phone to trigger changes is accomplished by using the phone's
+      onboard camera and tracking motion. Each phone is assigned an ID along
+      with one of four samples and presets so that when a participant waves in
+      front of one specific phone it will have a predictable outcome.
+    </notes>
+  </div>
+  <div class="layout" style="grid-template-rows: 75% 25%">
+    <img src="images/immaterialcloud/qi5jxtMLvuyjoAfMFJ6onDzEUQptFfu8cggWfDfms3Q.png" alt="" />
+    <a href="https://immaterial.cloud" target="blank">https://immaterial.cloud</a>
+
+    <notes>
+      This work needs 2-4 smartphones (iPhone or Android) connected to the
+      internet via WiFi or a cellular network. All sound during the
+      installation is played over the phones. A participant joins the network
+      by going to <https: //immaterial.cloud> and entering the ID of a chosen
+        "host" phone. No extra software is required to participate.
+        immaterial.cloud will work with a group of participants or just one.
+    </notes>
+  </div>
+
+  <div>
+    <iframe title="vimeo-player" class="responsive-iframe azyload" src="https://player.vimeo.com/video/414630388"
+      frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Resonant Landscapes -->
+  <div class="layout"
+    style="display: grid; grid-template-rows: repeat(4, 1fr); grid-template-columns: repeat(6, 1fr); gap: 10px;">
+    <!-- Central image -->
+    <div style="grid-row: 2 / 4; grid-column: 2 / 5;">
+      <img src="images/frozen-lake.jpeg" style="width: 100%; height: 100%;" alt="Featured image" />
+    </div>
+
+    <!-- Surrounding text -->
+    <div style="grid-row: 1 / 2; grid-column: 1 / 7;"><span class="underline">Resonant Landscapes</span></div>
+    <div style="grid-row: 2 / 4; grid-column: 1 / 2;"><span class="year">2023-2024</span></div>
+    <div style="grid-row: 2 / 4; grid-column: 5 / 7;">Locative Sound Art</div>
+    <div style="grid-row: 4 / 5; grid-column: 1 / 3;">Ambisonic Field Recording</div>
+    <div style="grid-row: 4 / 5; grid-column: 5 / 7;">GPS/Gyroscope</div>
+
+    <notes>
+      Resonant Landscapes is my most recent work, and it builds on the concepts explored in my previous projects. The
+      piece
+      uses ambisonic field recordings to create an immersive sound environment that responds to the listener's movement
+      through space. By integrating GPS and gyroscope data from smartphones, the work transforms the listener's
+      surroundings
+      into a dynamic, interactive soundscape, inviting them to explore the sonic possibilities of their environment.
+    </notes>
+  </div>
+
+  <div class="layout" style="grid-template-rows: 75% 25%">
+    <img src="images/rl-screenshots/sd-state-parks.png">
+    <div>South Dakota State Parks</div>
+  </div>
+  <div class="layout" style="grid-template-rows: 75% 25%">
+    <img src="images/rl-screenshots/uni-mi.png">
+    <div>Resonant Landscapes @ UniMi</div>
+  </div>
+  <div class="layout" style="grid-template-rows: 75% 25%">
+    <img src="images/rl-screenshots.png" alt="">
+
+    <div>User Interactions</div>
+
+    <notes>
+      Here you can see a few screenshots of the app, a user finding a listening spot then activating body oriented
+      tracking.
+    </notes>
+  </div>
+
+  <div class="layout" style="
+              grid-template-columns: repeat(4, 1fr);
+              grid-template-rows: repeat(5, 1fr);
+            ">
+    <div style="grid-area: 1 / 1 / 3 / 6; justify-content: center">
+      <h1>Audience page</h1>
+    </div>
+    <div style="grid-area: 3 / 1 / 6 / 3">
+      <img src="images/palisades.jpeg" width="100%" alt="" />
+    </div>
+    <div style="grid-area: 3 / 3 / 6 / 5">
+      <ul>
+        <li>Interactive campus map with listening spots</li>
+        <li>Audio playback within a 15-meter radius</li>
+        <li>Dynamic soundscapes based on user proximity</li>
+        <li>Body-oriented tracking using smartphone sensors</li>
+      </ul>
+    </div>
+
+    <notes>
+
+    </notes>
+  </div>
+
+  <div class="layout" style="
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+              ">
+    <div style="grid-area: 1 / 1 / 3 / 6; justify-content: center">
+      <h1>Technical Details</h1>
+    </div>
+    <div style="grid-area: 3 / 1 / 6 / 3">
+      <img src="images/octomic.jpg" width="100%" alt="" />
+    </div>
+    <div style="grid-area: 3 / 3 / 6 / 5">
+      <ul>
+        <li>Core Audio OctoMic</li>
+        <li>Web tech: React, Tailwind CSS, Resonance Audio SDK</li>
+        <li>Smartphone sensors: GPS, gyroscope, accelerometer</li>
+
+      </ul>
+    </div>
+
+    <notes>
+
+    </notes>
+  </div>
+
+  <div>
+    <img src="images/daniel.png" alt="">
+
+    <notes>
+      In addition to using the ambisonic recordings in the Resonant Landscapes app, DSU faculty and students composed
+      works
+      that premiered during a public concert at the Madison Area Arts Council.
+    </notes>
+  </div>
+
+  <div
+    style="display: grid; grid-template-rows: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(6, 1fr); gap: 10px; height: 100vh;">
+    <!-- Dominant visual element -->
+    <div style="grid-row: 1 / 4; grid-column: 1 / 4;"><span class="underline">Veins of</span></div>
+
+    <!-- Supporting elements creating rhythm
+    <div style="grid-row: 1 / 2; grid-column: 4 / 7;">
+      <audio src="images/veins-recording.wav" controls></audio>
+    </div> -->
+    <div style="grid-row: 2 / 3; grid-column: 1 / 4;"><span class="underline">the Earth</span></div>
+
+    <!-- Information block -->
+    <div style="grid-row: 3 / 4; grid-column: 4 / 7;">Fixed</div>
+
+    <!-- Footer information -->
+    <div style="grid-row: 4 / 5; grid-column: 4/7;">Media</div>
+    <div style="grid-row: 4 / 5; grid-column: 1;"><span class="year">2024</span></div>
+    <notes>
+      The work I composed for this concert was
+      a
+      multi-channel fixed media piece, “Veins of the Earth,” which explores geophonic and biophonic sounds to evoke a
+      sense of
+      connection between natural environments and the
+      life they sustain. This concert brought together the DSU and wider community to showcase the work of Digital Arts
+      and
+      Design students and faculty and promote engagement with the app.
+    </notes>
+  </div>
+
+  <div>
+    <iframe width="100%" height="166" class="responsive-iframe azyload" scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1833817539&color=%233c7494&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <div
+      style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+      <a href="https://soundcloud.com/tate-carson-1" title="Tate Carson 1" target="_blank"
+        style="color: #cccccc; text-decoration: none;">Tate Carson 1</a> · <a
+        href="https://soundcloud.com/tate-carson-1/veins-of-the-earth-stereo" title="Veins Of The Earth - Stereo"
+        target="_blank" style="color: #cccccc; text-decoration: none;">Veins Of The Earth - Stereo</a>
+    </div>
+  </div>
+
+
+  <!-- Impact statement gets strong position at bottom -->
+  <div
+    style="display: grid; grid-template-rows: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(6, 1fr); gap: 0px; height: 100vh;">
+    <!-- Large visual element -->
+    <div style="grid-row: 1 / 3; grid-column: 1 / 4;">FUTURE </div>
+
+    <!-- Contrasting text blocks -->
+    <div style="grid-row: 1 / 2; grid-column: 3 / 7;">WORK</div>
+    <div style="grid-row: 2 / 3; grid-column: 4 / 7;"><span class="underline">South Dakota Sound Archive</span></div>
+
+    <!-- Information hierarchy -->
+    <div style="grid-row: 3 / 5; grid-column: 1 / 3;"><span class="year">2025</span></div>
+    <div style="grid-row: 3 / 4; grid-column: 3 / 7;">Student Work</div>
+    <div style="grid-row: 4 / 5; grid-column: 3 / 7;">Community Engagement</div>
+    <notes>
+      My future research focuses on creating the DSU Digital Sound Archive, a project designed to capture the ecological
+      soundscapes and cultural heritage of South Dakota and nearby regions. By integrating advanced field recording
+      techniques
+      and metadata, the archive will support interdisciplinary research across sound studies, ecology, and digital arts.
+      A key
+      component of the project is the Resonant Landscapes app, which uses GPS technology to overlay soundscapes onto
+      physical
+      locations, enhancing public engagement and ecological awareness. This initiative aligns with DSU's mission to
+      expand
+      research opportunities and foster collaboration across disciplines.
+    </notes>
+  </div>
+
+
+</body>
+
+</html>
