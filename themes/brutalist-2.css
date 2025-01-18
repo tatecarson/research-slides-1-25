@@ -122,3 +122,37 @@ img:hover {
     color: blue;
     padding: 2px;
 } */
+
+.soundcloud-embed {
+    width: 100%;
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.soundcloud-embed iframe {
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.soundcloud-info {
+    font-size: 12px;
+    color: #666;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.4;
+    padding: 10px 0;
+}
+
+.soundcloud-info a {
+    color: #3c7494;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.soundcloud-info a:hover {
+    color: #2c5571;
+    text-decoration: underline;
+}
