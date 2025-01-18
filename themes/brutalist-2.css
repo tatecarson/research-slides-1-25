@@ -196,3 +196,12 @@ img:hover {
     font-weight: bold;
     margin-top: 0.5em;
 }
+
+.slide-count {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+    z-index: 1000;
+}

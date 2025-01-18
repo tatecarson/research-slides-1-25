@@ -58,6 +58,15 @@
         referenceNode.nextSibling
       );
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('body > div');
+      const counters = document.querySelectorAll('.slide-count');
+
+      counters.forEach((counter, index) => {
+        counter.textContent = `${index + 1}/${slides.length}`;
+      });
+    });
   </script>
   <script src="big.js"></script>
   <script src="js/lazysizes.min.js"></script>
@@ -88,6 +97,8 @@
       Introduction; mobile music and locative sound art with smartphones.
 
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div
@@ -117,6 +128,8 @@
       * These features allow for new ways of creating and experiencing music, and can transform our relationship with
       sound, environment, and technology.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="grid-template-rows: repeat(6, 1fr); grid-template-columns: repeat(8, 1fr); gap: 10px;">
@@ -150,6 +163,8 @@
       * These works have explored different aspects of mobile music and locative sound art, and have built on
       each other to create a body of work that explores the potential of the smartphone as an artistic platform.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
 
@@ -193,11 +208,15 @@
       followed. It opened up the possibility to use the smartphone not only as a tool for delivering notation, but as an
       instrument in itself.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div>
     <iframe class="responsive-iframe lazyload" src="https://www.youtube.com/embed/es_4M9t9K-4?si=1psU33t4fD6FsvEw"
       title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout"
@@ -232,6 +251,8 @@
       participatory compositions. Guided by audience evaluations, melodies evolved through a genetic algorithm,
       ultimately culminating in an emergent sound that reflected collective preferences.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div>
@@ -239,10 +260,12 @@
       frameborder="0" allowfullscreen></iframe>
     <notes>This is a performance version of the work that took place at LSU Museum
       of Art on March 4, 2018</notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div>
-    <div>Audience participation</div>
+    <div>Audience Participation</div>
     <notes>I wanted to create a work that went beyond the idea of audience
       participation by making the audience the sole creators of the work. Here
       there is no audience performer divide, every participant is both the
@@ -251,6 +274,8 @@
       listening or skipping a melody. They don't need to know how the piece
       works to appreciate its development.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="./images/amoreperfectunion/League_FtM_perf.jpg" alt="" />
@@ -268,6 +293,8 @@
       computers that would send messages to other computers to create a rich
       texture of evolving sounds.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
   <div>
     <img src="./images/amoreperfectunion/sims-galapagos.jpg" alt="an image of Karl Sims' Galapagos installation" />
@@ -285,6 +312,8 @@
       the fitness of that virtual organism, and made it more likely for the
       organism to pass its traits onto the next generation.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <!-- <div>
@@ -368,6 +397,8 @@
         </li>
       </ul>
     </div>
+    <div class="slide-count"></div>
+
   </div>
 
 
@@ -397,6 +428,8 @@
       specifically
       for parties and other social gatherings.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div>
@@ -410,6 +443,8 @@
       building up a bank of notes that will be used to form a melody.
       <br />
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="grid-template-rows: 75% 25%">
@@ -426,6 +461,8 @@
       creative-based musical games that requires the games to create some sort
       of new music, not just mimic as in karaoke.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/mesh-garden/instantcity_play.jpg" alt="" />
@@ -447,6 +484,8 @@
       not very accessible as it requires a unique light table to read where
       the blocks are positioned.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="grid-template-rows: 75% 25%">
@@ -466,6 +505,8 @@
     Mesh Garden is to create something similar to these pieces, but using
     the all-pervasive and accessible smartphone.
   </notes>
+  <div class="slide-count"></div>
+
   </div>
   <!-- <div>
     <div>Interactions</div>
@@ -568,6 +609,8 @@
         </li>
       </ul>
     </div>
+    <div class="slide-count"></div>
+
   </div>
 
   <!-- Sounds Aware -->
@@ -608,6 +651,8 @@
       Sounds
       Aware explored the potential of locative audio as a medium for crafting shared environmental experiences.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="fancy-quote">
@@ -627,6 +672,8 @@
     <div style="text-align: right;">- David Dunn</div>
 
     <notes> Composer David Dunn poses an inspirational question: </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div>
@@ -650,6 +697,8 @@
       mediated “ear cleaning,” as described by R. Murray Schafer in Ear
       Cleaning: Notes for an Experimental Music Course [13].
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="
@@ -688,6 +737,8 @@
       not yet with a mobile device. Sounds Aware implements a similar idea but
       with a mobile phone.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
 
@@ -731,6 +782,8 @@
       time
       and space.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="grid-template-rows: 75% 25%">
@@ -754,6 +807,8 @@
       attention that creates a shared sense of place and time for the
       participants.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
   <div class="layout" style="
         display: grid;
@@ -784,6 +839,8 @@
       with one of four samples and presets so that when a participant waves in
       front of one specific phone it will have a predictable outcome.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="grid-template-rows: 75% 25%">
@@ -798,11 +855,15 @@
         "host" phone. No extra software is required to participate.
         immaterial.cloud will work with a group of participants or just one.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div>
     <iframe title="vimeo-player" class="responsive-iframe azyload" src="https://player.vimeo.com/video/414630388"
       frameborder="0" allowfullscreen></iframe>
+    <div class="slide-count"></div>
+
   </div>
 
   <!-- Resonant Landscapes -->
@@ -828,15 +889,21 @@
       surroundings
       into a dynamic, interactive soundscape, inviting them to explore the sonic possibilities of their environment.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/rl-screenshots/sd-state-parks.png">
     <div>South Dakota State Parks</div>
+    <div class="slide-count"></div>
+
   </div>
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/rl-screenshots/uni-mi.png">
     <div>Resonant Landscapes @ UniMi</div>
+    <div class="slide-count"></div>
+
   </div>
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/rl-screenshots.png" alt="">
@@ -847,6 +914,8 @@
       Here you can see a few screenshots of the app, a user finding a listening spot then activating body oriented
       tracking.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="
@@ -871,6 +940,8 @@
     <notes>
 
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div class="layout" style="
@@ -895,6 +966,8 @@
     <notes>
 
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div>
@@ -905,6 +978,8 @@
       works
       that premiered during a public concert at the Madison Area Arts Council.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
   <div
@@ -936,6 +1011,8 @@
       and
       Design students and faculty and promote engagement with the app.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
 
 
@@ -965,9 +1042,13 @@
       expand
       research opportunities and foster collaboration across disciplines.
     </notes>
+    <div class="slide-count"></div>
+
   </div>
   <div id="citations">
     <h2>References</h2>
+    <div class="slide-count"></div>
+
   </div>
 
 </body>
