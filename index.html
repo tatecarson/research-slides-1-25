@@ -287,7 +287,7 @@
     </notes>
   </div>
 
-  <div>
+  <!-- <div>
     Technical Design
     <ul>
       <li>Controller webpage</li>
@@ -346,20 +346,33 @@
     </notes>
   </div>
 
-  <div>
-    Conclusions - What did I learn?
-    <ul>
-      <li>
-        The inner workings of the genetic algorithm are opaque to the
-        participants, more visualization could help.
-      </li>
-      <li>The work might be better as an installation.</li>
-      <li>No centralized database makes it difficult to keep state.</li>
-      <li>
-        There are more creative possibilities with rhythmic synchronization.
-      </li>
-    </ul>
+  -->
+
+  <div class="layout" style="
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+      ">
+    <div style="grid-area: 1 / 1 / 2 / 5; justify-content: center;">
+      <h1>Conclusions</h1>
+    </div>
+    <div style="grid-area: 2 / 1 / 5 / 5;">
+      <ul>
+        <li>
+          The inner workings of the genetic algorithm are opaque to the
+          participants, more visualization could help.
+        </li>
+        <li>The work might be better as an installation.</li>
+        <li>
+          There are more creative possibilities with rhythmic synchronization.
+        </li>
+      </ul>
+    </div>
   </div>
+
+
+
+
 
   <div class="layout"
     style="display: grid; grid-template-rows: repeat(4, 1fr); grid-template-columns: repeat(6, 1fr); gap: 10px;">
@@ -465,7 +478,7 @@
       by turning their phone, which affects two different parts of the work.
     </notes>
   </div>
-  <div class=" layout" style="grid-template-rows: 75% 25%">
+  <!-- <div class=" layout" style="grid-template-rows: 75% 25%">
     <img src="images/mesh-garden/mesh garden player interaction.jpg" alt="" />
     <div>Relative axis compass interaction</div>
     <notes>
@@ -485,8 +498,8 @@
       line is played through. The choices are up, down, drunk, and random. The
       rhythm is based on the same Euclidian rhythms that determine onsets.
     </notes>
-  </div>
-
+  </div> -->
+  <!-- 
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/mesh-garden/matching.jpg" alt="" />
     <div>Compass heading matching</div>
@@ -538,7 +551,7 @@
       synchronized clock. Used together, these methods create a successful
       distributed sequencer that works even with devices on separate networks.
     </notes>
-  </div>
+  </div> -->
   <div>
     <div>What did I learn?</div>
     <div>
@@ -593,24 +606,25 @@
     </notes>
   </div>
 
-  <div>
+  <div class="fancy-quote">
     <blockquote>
-      <p>
-        To what extent might the technologies of communication, art and
-        entertainment serve as 'prostheses' that would provide us with
-        experiences of wilderness that would not only enrich our human
-        identity but help us to preserve and expand the domain of the
-        non-human world?
-      </p>
+
+      To what extent might the technologies of communication, art and
+      entertainment serve as 'prostheses' that would provide us with
+      experiences of wilderness that would not only enrich our human
+      identity but help us to preserve and expand the domain of the
+      non-human world?
+
       <cite>
         David Dunn. Wilderness as Reentrant Form: Thoughts on the Future of
         Electronic Art and Nature. Leonardo, (4):377, 1988.
       </cite>
     </blockquote>
-    <div>- David Dunn</div>
+    <div style="text-align: right;">- David Dunn</div>
 
     <notes> Composer David Dunn poses an inspirational question: </notes>
   </div>
+
   <div>
     A goal of Sounds Aware is to shift attention to geophonic and biophonic
     soundscape away from the anthrophonony.
@@ -845,16 +859,16 @@
     <div style="grid-area: 1 / 1 / 3 / 6; justify-content: center">
       <h1>Technical Details</h1>
     </div>
-    <div style="grid-area: 3 / 1 / 6 / 3">
-      <img src="images/octomic.jpg" width="100%" alt="" />
-    </div>
-    <div style="grid-area: 3 / 3 / 6 / 5">
+    <div style="grid-area:  3 / 1 / 6 / 3">
       <ul>
         <li>Core Audio OctoMic</li>
         <li>Web tech: React, Tailwind CSS, Resonance Audio SDK</li>
         <li>Smartphone sensors: GPS, gyroscope, accelerometer</li>
 
       </ul>
+    </div>
+    <div style="grid-area:3 / 3 / 6 / 5">
+      <img src="images/octomic.jpg" width="100%" alt="" />
     </div>
 
     <notes>
@@ -931,7 +945,9 @@
       research opportunities and foster collaboration across disciplines.
     </notes>
   </div>
-
+  <div id="citations">
+    <h2>References</h2>
+  </div>
 
 </body>
 
