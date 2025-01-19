@@ -121,11 +121,11 @@
       technology</div>
 
     <notes>
-      * A few things that make smartphones particularly interesting for music and sound art are their ubiquity, many
+      A few things that make smartphones particularly interesting for music and sound art are their ubiquity, many
       people already have one in their pocket, the sensors that come with them, like GPS, gyroscope, and microphone, and
       the networks that they can connect to, allowing for the creation of collaborative digital musical experiences.
 
-      * These features allow for new ways of creating and experiencing music, and can transform our relationship with
+      These features allow for new ways of creating and experiencing music, and can transform our relationship with
       sound, environment, and technology.
     </notes>
     <div class="slide-count"></div>
@@ -157,7 +157,8 @@
 
     <notes>
       * I'll give an overview of the progression of my work over the past few years, starting with And the water receded
-      in 2017, then moving on to A more perfect union, Mesh Garden, Sounds Aware, immaterial.cloud, and finally Resonant
+      in 2017, then moving on to A more perfect union, Mesh Garden, Sounds Aware, immaterial.cloud, and finally my most
+      recent work Resonant
       Landscapes.
 
       * These works have explored different aspects of mobile music and locative sound art, and have built on
@@ -192,8 +193,6 @@
     <div style="grid-row: 3/6; grid-column:5/7">
       <img src="images/and-the-water.jpg" alt="">
     </div>
-    <!-- Tools section header -->
-    <!-- <div style="grid-row: 3 / 4; grid-column: 1 / 3;">Tools</div> -->
 
     <!-- Tools list indented and stacked -->
     <div style="grid-row: 4 / 6; grid-column: 2 / 5;">
@@ -202,11 +201,17 @@
 
     <div style="grid-row: 6 / 7; grid-column: 4 / 8;">Stepping Stone to Participatory Works &#8594;</div>
     <notes>
-      And the water receded was a response to the devastation of Hurricane Katrina, and explored the use of smartphones
-      as a platform for creating and experiencing music. The work used smartphone-based animated notation, and was a
-      stepping stone to the participatory works that
-      followed. It opened up the possibility to use the smartphone not only as a tool for delivering notation, but as an
-      instrument in itself.
+      *And the water receded* is a musical piece that sonifies Hurricane Katrina data for three performers and
+      electronics, condensing the storm's timeline from formation to landfall. The work stems from the composer's
+      personal hurricane experiences and uses animated smartphone-based notation to synchronize performers with
+      electronics. The first movement, *And the waters returned*, transforms storm data (latitude, longitude, wind
+      speed, and air pressure) into musical parameters, using saw waves and noise to reflect the storm's chaotic nature.
+      The second movement, *What remained*, derives melodies from recovered family recipes. The piece employs
+      **Rhizome** for OSC message distribution, data visualization through projected maps, and ambisonics for spatial
+      audio representation. As a data-inspired composition, it balances artistic interpretation with scientific
+      sonification, using natural patterns rather than random algorithms. Initially using smartphones only for score
+      display, later adaptations employed them as distributed speakers when traditional multichannel systems weren't
+      available, establishing groundwork for future smartphone-based musical works.
     </notes>
     <div class="slide-count"></div>
 
@@ -265,14 +270,23 @@
   </div>
 
   <div>
-    <div>Audience Participation</div>
-    <notes>I wanted to create a work that went beyond the idea of audience
-      participation by making the audience the sole creators of the work. Here
-      there is no audience performer divide, every participant is both the
-      audience and performer. The participants don't need any special skill to
-      be involved, they simply feed their preferences into the algorithm by
-      listening or skipping a melody. They don't need to know how the piece
-      works to appreciate its development.
+    <div>Breaking the Audience / Performer Divide</div>
+    <notes>
+      * The audience transitions from passive listeners to active creators in *A more perfect union*, with all
+      participants serving dual roles as both audience and performers, eliminating traditional performer-audience
+      boundaries
+
+      * Participation requires no musical expertise - audience members simply express preferences by choosing to listen
+      to or skip melodies, making the work accessible while allowing them to drive its evolution
+
+      * A genetic algorithm processes audience preferences in real-time, creating a feedback loop where collective
+      choices directly shape the musical composition's development
+
+      * The work functions as a conceptual experiment focused on collective creation rather than predetermined musical
+      outcomes - participants don't need technical knowledge of the underlying algorithm to meaningfully contribute
+
+      * The platform enables shared creation through audience interaction, fostering deeper connection as participants
+      hear the composition develop through their collective input and preferences
     </notes>
     <div class="slide-count"></div>
 
@@ -315,67 +329,6 @@
     <div class="slide-count"></div>
 
   </div>
-
-  <!-- <div>
-    Technical Design
-    <ul>
-      <li>Controller webpage</li>
-      <li>Server backend</li>
-      <li>Audience webpage</li>
-    </ul>
-
-    <notes>The technical design of A more perfect union consists of three parts:
-      the controller webpage, the audience webpage and genetic algorithm, and
-      the server that connects the audience members' devices.
-
-      <br />
-      When an audience member stops a melody, the fitness function of that
-      melody is transmitted to all other audience members using Rhizome.
-      Amazon EC25, a cloud computing service, hosts the webpages and server.
-      Cloud computing is a cheaper alternative to traditional hosting
-      solutions because the hosting cost is based on time used during a
-      performance.
-
-      <br />
-
-      The controller webpage has buttons for starting and stopping the work.
-      There is a box to type in a duration for the performance, which allows
-      the controller to vary the running time for different performances.
-
-      <br />
-      The audience webpage is where the sound generation happens.
-    </notes>
-  </div>
-
-  <div class="layout" style="
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(5, 1fr);
-          ">
-    <div style="grid-area: 1 / 1 / 3 / 6; justify-content: center">
-      <h1>Audience page</h1>
-    </div>
-    <div style="grid-area: 3 / 1 / 6 / 3">
-      <img src="images/amoreperfectunion/phone1.jpg" width="100%" alt="" />
-    </div>
-    <div style="grid-area: 3 / 3 / 6 / 5">
-      <ul>
-        <li>Sound generation - Web Audio API with Tone.js</li>
-        <li>User interface - NexusUI</li>
-        <li>Visualizations - p5.js</li>
-      </ul>
-    </div>
-
-    <notes>
-      When an audience member reaches the audience webpage, Tone.js, a
-      JavaScript framework for working with the Web Audio API, downloads and
-      prepares samples. The audience members control the starting and stopping
-      of sounds with a toggle switch from the interface library NexusUI. Each
-      sound is accompanied by a visualization of the melody currently being
-      heard; p5.js, a drawing library, displays the visualization.
-    </notes>
-  </div>
-
-  -->
 
   <div class="layout" style="
         display: grid;
@@ -421,12 +374,9 @@
 
     <notes>
       After A More Perfect Union, I sought to explore composing for spaces beyond the concert hall, leading to the
-      creation of
-      Mesh Garden, a musical game that expanded on the smartphone's potential as a platform for creating and
-      experiencing
-      music. Utilizing smartphone gyroscopes, the work offered an interactive and immersive experience, designed
-      specifically
-      for parties and other social gatherings.
+      creation of Mesh Garden, a musical game that expanded on the smartphone's potential as a platform for creating and
+      experiencing music. Utilizing smartphone gyroscopes, the work offered an interactive and immersive experience,
+      designed specifically for parties and other social gatherings.
     </notes>
     <div class="slide-count"></div>
 
@@ -820,10 +770,12 @@
     </div>
     <div style="grid-area: 2 / 1 / 5 / 5;">
       <ul>
-        <li>Peer-to-peer networking</li>
-        <li>WebRTC</li>
-        <li>IPFS</li>
-        <li>Motion tracking</li>
+        <li>Peer-to-peer networking in immaterial.cloud enables direct communication between phones, avoiding a central
+          server and fostering a communal experience.</li>
+        <li>immaterial.cloud uses WebRTC for real-time data transfer, facilitating direct streaming of audio and data
+          between browsers without extra software.</li>
+        <li>immaterial.cloud employs motion tracking using the phone's camera, where user movement triggers changes in
+          the sound and sends that data to other devices on the network.</li>
       </ul>
     </div>
     <notes>
@@ -893,6 +845,37 @@
 
   </div>
 
+  <div>
+
+    <em><strong>Resonant Landscapes</strong></em> creates a <strong>hybrid place</strong>, merging natural
+    soundscapes with urban spaces through <strong>ambisonic audio</strong> and GPS technology.
+
+    <notes>
+      Creating a Hybrid Place:
+
+      - Locative Media: Maps state park coordinates onto DSU campus locations, creating a scaled geographical
+      representation.
+      - Ambisonic Audio: Plays immersive soundscapes when users approach designated spots.
+      - Hybrid Soundscapes: Combines recorded nature sounds with real-time environmental sounds.
+      - Body-Oriented Tracking: Uses smartphone sensors (GPS, gyroscope, accelerometer) for dynamic sound orientation.
+      - Non-Representational Sound: Encourages immersion through abstract, non-representational soundscapes.
+
+      Theoretical Influences:
+      - Draws from sound art, soundwalking, and soundscape studies.
+      - Resituates soundscapes in urban settings to encourage reflection on:
+      - Ecological significance.
+      - Cultural importance.
+      - Relationship between sound, nature, and urban life.
+
+      Experience & Impact:
+
+      - Creates a "hybrid place" blending virtual and physical realities.
+      - Induces a contemplative, reflective state, offering an escape from daily worries.
+      - Challenges traditional notions of music and art through immersive, dynamic soundscapes.
+    </notes>
+    <div class="slide-count"></div>
+  </div>
+
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/rl-screenshots/me-carter.png" alt="">
 
@@ -940,7 +923,7 @@
               grid-template-rows: repeat(5, 1fr);
             ">
     <div style="grid-area: 1 / 1 / 3 / 6; justify-content: center">
-      <h1>Audience page</h1>
+      <h1>Audience Page</h1>
     </div>
     <div style="grid-area: 3 / 1 / 6 / 3">
       <img src="images/palisades.jpeg" width="100%" alt="" />
@@ -986,6 +969,20 @@
     <div class="slide-count"></div>
 
   </div>
+
+  <div class="layout">
+
+    Resonant Landscapes Concert
+
+    <notes>
+      In addition to using the ambisonic recordings in the Resonant Landscapes app, DSU faculty and students composed
+      works
+      that premiered during a public concert at the Madison Area Arts Council.
+    </notes>
+    <div class="slide-count"></div>
+
+  </div>
+
 
   <div class="layout">
 
