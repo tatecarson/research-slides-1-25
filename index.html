@@ -373,10 +373,21 @@
     <div style="grid-row: 4 / 5; grid-column: 5 / 7;">Party Music</div>
 
     <notes>
-      After A More Perfect Union, I sought to explore composing for spaces beyond the concert hall, leading to the
-      creation of Mesh Garden, a musical game that expanded on the smartphone's potential as a platform for creating and
-      experiencing music. Utilizing smartphone gyroscopes, the work offered an interactive and immersive experience,
-      designed specifically for parties and other social gatherings.
+      * *Mesh Garden* is a participatory music piece using smartphones as speakers/controllers in social settings, where
+      players interact through orientation-based movements to create ambient music via a web interface
+
+      * The system enables creative musical interaction through phone orientation and compass heading matching - when
+      phones face each other, players can trade notes, fostering non-competitive creative orchestration
+
+      * Players are assigned either long bowed or short percussive sounds, with technical implementation using Web Audio
+      API, Tone.js, Socket.io, and Ableton Link for device synchronization
+
+      * The piece builds on previous works by moving performance to casual social spaces and increasing player agency,
+      while maintaining accessibility for non-musicians through game mechanics
+
+      * Player feedback indicated engagement with the musical creation process, though some developed aggressive
+      note-stealing strategies, suggesting potential future improvements for balancing experienced and new player
+      experiences
     </notes>
     <div class="slide-count"></div>
 
@@ -388,10 +399,9 @@
       allowfullscreen></iframe>
 
     <notes>
-      The work also has a gameplay aspect; if two players' phones match in
-      orientation, one player has the option to take the other player's note,
-      building up a bank of notes that will be used to form a melody.
-      <br />
+      Here's a video of the piece in action. The video shows a group of people playing the game, interacting with each
+      other.
+
     </notes>
     <div class="slide-count"></div>
 
@@ -405,11 +415,20 @@
 
     </div>
     <notes>
-      You may think that this sounds similar to games like Guitar Hero but
-      that would be considered mimicry, the object being recreation of music
-      not the creation of something new. Thomas Studley gives a definition of
-      creative-based musical games that requires the games to create some sort
-      of new music, not just mimic as in karaoke.
+      * *Mesh Garden* is a creative-based musical game focused on generating original music through player interaction,
+      contrasting with mimicry games like *Guitar Hero* which recreate existing songs
+
+      * Core gameplay involves musical decision-making through phone orientation and player interaction, with mechanics
+      designed for creating new music rather than reproducing predetermined scores
+
+      * Following Thomas Studley's framework, *Mesh Garden* meets creative-based game criteria: gameplay centers on
+      musical decisions, players directly influence music production, and actions are framed as creating new music
+
+      * The game emphasizes social meaning through collaborative creation, similar to folk music traditions, whereas
+      mimicry games focus on individual performance accuracy
+
+      * Key distinction lies in originality vs. reproduction - *Mesh Garden* facilitates emergent, unique compositions
+      through player choice and collaboration, while *Guitar Hero* values accurate reproduction of existing music
     </notes>
     <div class="slide-count"></div>
 
@@ -424,124 +443,27 @@
 
       </div>
     </div>
-    <notes>Many music games exist that fulfill all or part of Studley's definition
-      for creative-based music games. Instant City1 is a music-building table
-      game created by Sibylle Hauert and Daniel Reichmuth in collaboration
-      with Volker Bohm. Players stack blocks on top of each other to create
-      music. Mesh Garden is inspired by the ambient gameplay aspect of this
-      work. Instant City has no specific gameplay or aesthetic goal; the
-      gameplay mode is exploratory. While being an impressive project, it is
-      not very accessible as it requires a unique light table to read where
-      the blocks are positioned.
+    <notes>
+      * *Instant City* is a music-building game using blocks on a light table that translates block configurations into
+      music, featuring ambient gameplay focused on exploration without predetermined goals
+
+      * Like *Mesh Garden*, it emphasizes exploratory musical creation through player interaction, but differs in
+      requiring specialized equipment (light table) versus *Mesh Garden's* accessible smartphone interface
+
+      * *Mesh Garden* drew inspiration from *Instant City's* ambient gameplay style and interactive music creation,
+      while improving accessibility through web-based mobile technology
+
+      * Key technological differences: *Instant City* uses physical blocks and light table detection, while *Mesh
+      Garden* employs Web Audio API, Tone.js, socket.io, and Ableton Link
+
+      * While both focus on exploratory music-making, *Mesh Garden* innovates through orientation-based controls and
+      note-trading mechanics versus *Instant City's* block arrangement system
     </notes>
     <div class="slide-count"></div>
 
   </div>
 
-  <div class="layout" style="grid-template-rows: 75% 25%">
-    <img src="images/mesh-garden/Reactable_Multitouch.jpg" width="1000px""
-      alt="" />
-      <div>
-        reacTable
-      </div>
-      <div><em class=" photo-credit">Photo: Daniel Williams</em>
-  </div>
-  <notes>
-    The reacTable[7] is another inspiration for Mesh Garden. It is an
-    instrument with a tabletop user interface that allows players to create
-    music by moving physical objects on top of a screen to manipulate
-    musical parameters. Again, the non- portability of the table interface
-    renders this inaccessible to a large group of people. The intention with
-    Mesh Garden is to create something similar to these pieces, but using
-    the all-pervasive and accessible smartphone.
-  </notes>
-  <div class="slide-count"></div>
 
-  </div>
-  <!-- <div>
-    <div>Interactions</div>
-
-    <notes>
-      The interactions of Mesh Garden are designed to be intuitive for a
-      non-musically trained player to use. Using the smartphone's compass, the
-      piece allows the player to interact with the sounds. A player interacts
-      by turning their phone, which affects two different parts of the work.
-    </notes>
-  </div> -->
-  <!-- <div class=" layout" style="grid-template-rows: 75% 25%">
-    <img src="images/mesh-garden/mesh garden player interaction.jpg" alt="" />
-    <div>Relative axis compass interaction</div>
-    <notes>
-      <br />
-      One aspect is turning on the relative axis. When the player logs on,
-      their forward-facing position is registered to be zero degrees, which
-      will produce the default sounds. Then, by turning the phone 90 degrees,
-      180 degrees, and 270 degrees, the player can pick between four different
-      pre- determined note options and rhythmic options made up of four
-      different Euclidian rhythmic patterns. The rhythmic patterns are
-      randomized for each player when they log on, but do not change after
-      this point. Therefore, the player should be able to tell one pattern
-      from another and use their musical intuition to choose the pattern that
-      best ts musically.
-      <br />
-      To control the long bowed sound, the player can decide what order the
-      line is played through. The choices are up, down, drunk, and random. The
-      rhythm is based on the same Euclidian rhythms that determine onsets.
-    </notes>
-  </div> -->
-  <!-- 
-  <div class="layout" style="grid-template-rows: 75% 25%">
-    <img src="images/mesh-garden/matching.jpg" alt="" />
-    <div>Compass heading matching</div>
-    <notes>
-      The more active game play aspect of Mesh Garden is the compass heading
-      matching feature. When a player matches with the headings of another
-      player, the player that was moving last plays an unsynchronized melody.
-      To tell if two phones are facing towards each other, the compass head-
-      ings are compared. The absolute compass values are used instead of the
-      relative orientation data of the other section. Each phone's heading is
-      determined using the kompas npm library, then each heading is sent to
-      the server. On the server, the headings are continually compared with
-      each other. If the dierence between one player's head- ing and another's
-      is 180 degrees, then the phones are facing each other. Once a match is
-      found between two phones, a sound plays on one of the phones. The sound
-      is one note of a melody that comes from a bank of pre-selected notes.
-      This player then has the chance to take the note of the phone it matched
-      with and add that note to its bank of notes. The phone that lost its
-      note can then try to match with other phones to add their notes and
-      build up its own melody. Since notes only get traded back and forth be-
-      tween phones, they are never totally lost, rendering more of a creative
-      orchestration between distributed devices.
-    </notes>
-  </div>
-  <div>
-    <div>Rhythmic synchronization with Ableton Link</div>
-
-    <notes>
-      Link is a technology developed by Ableton that allows any computers
-      running Live to play in sync with each other. Because Link is open
-      sourced, it is possible to use it in non- Live applications [2]. The
-      Link API is in C++, a language not suitable for the web; so, to run Link
-      in the web, I had to use a Node.js port, node-abletonlink, created by
-      GitHub user 2bbb. This project ports the C++ Link implementation to
-      Node.js to allow its use in the browser. Because of platform specific
-      installation issues, Docker was needed to deploy Mesh Garden to a Linux
-      server. I used Docker to ensure that the development and deployment
-      environment were identical. By default, node-ableton link provides time
-      based synchronization between devices but does not ensure that the
-      synchronization is in metrical, musical time. Notes will all play at the
-      same time, but the tempo will fluctuate due to network latency. To x
-      this problem, I use the Trans- port system in Tone.js. When a player
-      joins Mesh Garden, their device's rhythmic transport starts, giving
-      their device a musically metronomic time clock. When a new player logs
-      on, the system stops each of the other players trans- ports and then
-      immediately restarts them, ensuring that all players stay in sync. I
-      also use metrical quantization of time values in Tone.js to ensure that
-      metronomic variation will be smoothed out by quantization on a
-      synchronized clock. Used together, these methods create a successful
-      distributed sequencer that works even with devices on separate networks.
-    </notes>
-  </div> -->
   <div class="layout" style="
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -559,6 +481,23 @@
         </li>
       </ul>
     </div>
+
+    <notes>
+      * Key technical innovation of *Mesh Garden* lies in synchronization through Web Audio API, Tone.js, socket.io, and
+      Ableton Link, enabling distributed sequencing across networks with metrical quantization for smooth timing
+
+      * Game mechanics enable broad participation through intuitive phone orientation controls and note-trading,
+      following Thomas Turino's participatory performance model where all are "players" rather than "audience"
+
+      * Current design successfully enables non-musicians to contribute, but lacks advanced interfaces for skilled
+      musicians - future versions may need skill-testing mechanisms and additional control layers
+
+      * The indeterminate nature of the music and broad accessibility mirror folk traditions, though this may impact the
+      emergence of flow states for experienced players
+
+      * Development focus: balancing accessibility with advanced musical interaction - maintaining simple entry points
+      while adding features for skilled players to develop mastery
+    </notes>
     <div class="slide-count"></div>
 
   </div>
@@ -593,13 +532,11 @@
 
     <notes>
       After Mesh Garden, I became interested in leveraging the mobility of smartphones to create experiences designed
-      for
-      outdoor environments and walking. This led to Sounds Aware, a locative audio sound art project that fostered a
-      shared
-      experience of the environment through sound. Developed as an app, the project enabled users to share sound walks,
-      creating a collective soundscape that reflected the diversity of their surroundings. Running from 2019 to 2021,
-      Sounds
-      Aware explored the potential of locative audio as a medium for crafting shared environmental experiences.
+      for outdoor environments and walking. This led to Sounds Aware, a locative audio sound art project that fostered a
+      shared experience of the environment through sound. Developed as a web app, the project enabled users to share
+      sound walks, creating a collective soundscape that reflected the diversity of their surroundings. Running from
+      2019 to 2021, Sounds Aware explored the potential of locative audio as a medium for crafting shared environmental
+      experiences.
     </notes>
     <div class="slide-count"></div>
 
@@ -621,76 +558,65 @@
     </blockquote>
     <div style="text-align: right;">- David Dunn</div>
 
-    <notes> Composer David Dunn poses an inspirational question: </notes>
+    <notes>
+      * Composer and artist, David Dunn proposes that communication and art technologies can serve as "prostheses" to
+      connect people with wilderness experiences, viewing this as essential since not everyone can access natural spaces
+      directly
+
+      * Sounds Aware exemplifies technology as a "prosthesis" for experiencing wilderness by using smartphones to
+      connect users with natural soundscapes through sound walks, active listening, and decentralized sharing. The app
+      focuses on restoring attention and fostering ecological awareness by helping users overcome "numbed ears" and
+      rediscover natural sounds in their environment. It transforms survey data about restorative experiences into
+      shareable sonifications, creating a collective tool for deeper engagement with nature.
+
+      * immaterial.cloud explores using peer-to-peer technology to create shared experiences and counter isolation,
+      showing how technology can foster meaningful interconnection
+
+      * Resonant Landscapes overlays natural soundscapes onto urban spaces using GPS, creating hybrid experiences that
+      encourage users to discover nature in familiar places
+
+      * Environmental artists like Truax, Westerkamp, and Barclay use sound art and interactive technology to raise
+      ecological awareness and encourage sustainable behavior through direct engagement
+
+      * While these technological prostheses don't replace direct nature experiences, they can enhance environmental
+      understanding, shift perceptions, and motivate conservation efforts
+    </notes>
     <div class="slide-count"></div>
 
   </div>
 
-  <div>
-    A goal of Sounds Aware is to shift attention to geophonic and biophonic
-    soundscapes, away from the anthrophonony.
+
+  <div class="layout">
+    <img src="images/sounds-aware-v2/ui-1.png" alt="" />
 
     <notes>
-      The goal of Sounds Aware is to bring the user’s awareness to the
-      geophonic and biophonic soundscape, which is often so masked by noise
-      pollution that it has fallen out of awareness for many of us. Sounds
-      Aware seeks to shift the user’s concept of nature to something that has
-      no starting or end- ing point; it is all around us. The app brings
-      awareness by focusing attention on the environment. Because of the pre-
-      dominance of eye culture [3], our reliance on seeing rather than
-      listening as a primary means of sensing the world, it is a lot to ask of
-      a person who might be uninterested in acoustic ecology to “just listen”
-      to their environment. But, if you give them a tool that urges listening
-      in the quieter places, where the natural world will be more audible,
-      there is a better chance of them engaging with those sounds because the
-      app focused their perception. Sounds Aware is a means of technologically
-      mediated “ear cleaning,” as described by R. Murray Schafer in Ear
-      Cleaning: Notes for an Experimental Music Course [13].
+      * Sounds Aware enables users to create and share sound walks by answering survey questions about the
+      restorativeness of specific locations
+
+      * The app converts survey responses into wind chime-like sonifications that other users hear when following the
+      same walk
+
+      * It uses decentralized technology (IPFS, 3Box) to manage user data, resisting the attention economy of
+      traditional social media
     </notes>
     <div class="slide-count"></div>
 
   </div>
 
-  <div class="layout" style="
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-      ">
-    <div style="grid-area: 1 / 1 / 2 / 5; justify-content: center;">
-      <h1>Noise Pollution</h1>
-    </div>
-    <div style="grid-area: 2 / 1 / 5 / 5;">
-      <ul>
-        <li>
-          There is overwhelming evidence that exposure to environmental noise
-          has adverse effects on the health of the population.<cite>World Health Organization, Burden of disease from
-            environmental
-            noise: Quantification of healthy life years lost in Europe. World
-            Health Organization. Regional Office for Europe, 2011.
-          </cite>
-        </li>
-        <li>
-          Sounds Aware will make users more aware of how much harmful noise
-          they experience in their daily lives.
-        </li>
-      </ul>
-    </div>
-    <notes>A 2011 World Health Organization (WHO) report found that “there is
-      overwhelming evidence that exposure to environmental noise has adverse
-      effects on the health of the population [10].” Sounds Aware shifts a
-      users attention away from noise pollution and to nature, which may help
-      mitigate adverse health effects caused by noise pollution.
-      <br />
-      While a reduction in environmental noise at the source would be the best
-      way to solve noise pollution, masking the noise is a stopgap solution. A
-      masking solution has been implemented by several projects [9, 15] but
-      not yet with a mobile device. Sounds Aware implements a similar idea but
-      with a mobile phone.
+  <div class="layout">
+    <img src="images/sounds-aware-v2/ui-2.png" alt="" />
+
+    <notes>
+      * The app focuses on restoration of attention and ecological awareness by encouraging mindful listening and
+      outdoor
+      experiences
+
+      * Users must be physically present to create or experience walks, promoting direct engagement with natural
+      environments
     </notes>
     <div class="slide-count"></div>
 
   </div>
-
 
   <!-- immaterial.cloud -->
   <div class="layout"
@@ -720,17 +646,12 @@
 
     <notes>
       For this project, I revisited the concept of collaborative music-making with smartphones, this time exploring the
-      use of
-      the phone's camera as a trigger for changes in sound. Networked smartphones formed a temporary sound art
-      installation
-      that could be set up anywhere, activating sound by flipping phones upward to allow the camera to detect movement.
-      immaterial.cloud was a collaborative sound art project that harnessed peer-to-peer networking to create and share
-      music.
-      Designed as a collective experience, participants contributed to a shared soundscape, leveraging smartphone
-      networking
-      capabilities to facilitate a dynamic, interactive musical installation that transcended traditional boundaries of
-      time
-      and space.
+      use of the phone's camera as a trigger for changes in sound. Networked smartphones formed a temporary sound art
+      installation that could be set up anywhere, activating sound by flipping phones upward to allow the camera to
+      detect movement. immaterial.cloud was a collaborative sound art project that harnessed peer-to-peer networking to
+      create and share music. Designed as a collective experience, participants contributed to a shared soundscape,
+      leveraging smartphone networking capabilities to facilitate a dynamic, interactive musical installation that
+      transcended traditional boundaries of time and space.
     </notes>
     <div class="slide-count"></div>
 
@@ -740,60 +661,20 @@
     <img src="images/immaterialcloud2.png" alt="immaterial.cloud" />
     <div>Participants interacting with the work</div>
     <notes>
-      immaterial.cloud creates the opportunity for a shared space with
-      participants by using technology in a collective way. It requires the
-      phones to act together, and out of their hands, not as individuals as is
-      usual in this era of personalized devices. Experiencing immaterial.cloud
-      presents an opportunity for a restoration of attention that might have
-      been lost by an overuse of technology in the typical way.
+      * Immaterial.cloud is a web app using peer-to-peer technology (WebRTC) to create shared experiences, developed
+      during COVID-19 isolation
+      * Users interact through motion (tracked by phone cameras), which triggers shared sound changes across connected
+      devices
+      * Unlike traditional social media, it aims for deep attention and collective experience rather than profiting from
+      user attention
+      * Phones connect through a host device using broadcast methods, with each device assigned one of four presets
+      using granular synthesis
 
-      <br />
-
-      The concept for immaterial.cloud emerged as a way to create a communal
-      experience during the COVID-19 shelter-in-place orders in which many
-      people have turned to the internet for communication and entertainment.
-      While social networks such as Facebook or Google seek our attention for
-      profit, [immaterial.cloud](http://immaterial.cloud) seeks a deep
-      attention that creates a shared sense of place and time for the
-      participants.
     </notes>
     <div class="slide-count"></div>
 
   </div>
-  <div class="layout" style="
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-      ">
-    <div style="grid-area: 1 / 1 / 2 / 5; justify-content: center;">
-      <h1>Technical Description</h1>
-    </div>
-    <div style="grid-area: 2 / 1 / 5 / 5;">
-      <ul>
-        <li>Peer-to-peer networking in immaterial.cloud enables direct communication between phones, avoiding a central
-          server and fostering a communal experience.</li>
-        <li>immaterial.cloud uses WebRTC for real-time data transfer, facilitating direct streaming of audio and data
-          between browsers without extra software.</li>
-        <li>immaterial.cloud employs motion tracking using the phone's camera, where user movement triggers changes in
-          the sound and sends that data to other devices on the network.</li>
-      </ul>
-    </div>
-    <notes>
-      [immaterial.cloud](http://immaterial.cloud) is a web application that
-      uses peer-to-peer technologies to send data between phones without the
-      need for an intermediary server. The [PeerJS](https://peerjs.com/)
-      library is used to manage WebRTC connections to send data between
-      phones. The application is hosted on [IPFS](https://ipfs.io/), a
-      peer-to-peer hypermedia protocol, which removes the need for centralized
-      server hosting. The participant interaction of waving a hand around in
-      front of a phone to trigger changes is accomplished by using the phone's
-      onboard camera and tracking motion. Each phone is assigned an ID along
-      with one of four samples and presets so that when a participant waves in
-      front of one specific phone it will have a predictable outcome.
-    </notes>
-    <div class="slide-count"></div>
 
-  </div>
 
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/immaterialcloud/qi5jxtMLvuyjoAfMFJ6onDzEUQptFfu8cggWfDfms3Q.png" alt="" />
@@ -835,11 +716,10 @@
 
     <notes>
       Resonant Landscapes is my most recent work, and it builds on the concepts explored in my previous projects. The
-      piece
-      uses ambisonic field recordings to create an immersive sound environment that responds to the listener's movement
-      through space. By integrating GPS and gyroscope data from smartphones, the work transforms the listener's
-      surroundings
-      into a dynamic, interactive soundscape, inviting them to explore the sonic possibilities of their environment.
+      piece uses ambisonic field recordings to create an immersive sound environment that responds to the listener's
+      movement through space. By integrating GPS and gyroscope data from smartphones, the work transforms the listener's
+      surroundings into a dynamic, interactive soundscape, inviting them to explore the sonic possibilities of their
+      environment.
     </notes>
     <div class="slide-count"></div>
 
@@ -882,12 +762,10 @@
     <div>Student Research</div>
 
     <notes>
-      Resonant Landscapes was developed in collaboration with a student at Dakota State University. The project
-      provided
-      an opportunity to engage with cutting-edge technologies and explore the creative possibilities of
-      locative sound art. Through their research and experimentation, my student contributed to the development of the
-      app
-      and helped shape its features.
+      Resonant Landscapes was developed in collaboration with a student at Dakota State University. The project provided
+      an opportunity to engage with cutting-edge technologies and explore the creative possibilities of locative sound
+      art. Through their research and experimentation, my student contributed to the development of the app and helped
+      shape its features.
     </notes>
     <div class="slide-count"></div>
 
@@ -898,12 +776,19 @@
     <div>South Dakota State Parks</div>
     <div class="slide-count"></div>
 
+    <notes>
+      You can see in this picture all of the state parks we recorded at. Carter was integral to this project, as I would
+      not have been able to record all of these locations without his help.
+    </notes>
   </div>
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/rl-screenshots/uni-mi.png">
     <div>Resonant Landscapes @ UniMi</div>
     <div class="slide-count"></div>
-
+    <notes>
+      * As locative media art rather than site-specific art, Resonant Landscapes can be deployed anywhere by mapping
+      state park coordinates onto new locations
+    </notes>
   </div>
   <div class="layout" style="grid-template-rows: 75% 25%">
     <img src="images/rl-screenshots.png" alt="">
@@ -938,7 +823,18 @@
     </div>
 
     <notes>
+      * Resonant Landscapes' audience webpage provides an interactive campus map with marked "listening spots" that
+      correspond to state park locations
 
+      * Users experience audio playback within 15-meter radius zones, with volume increasing as they approach centers
+
+      * Visual feedback includes falling leaves animation that speeds up with proximity
+
+      * The app uses smartphone sensors for body-oriented tracking, letting users change soundscape orientation by
+      turning physically
+
+      * The web-based interface requires no downloads, creating a hybrid space by overlaying natural soundscapes onto
+      the campus environment
     </notes>
     <div class="slide-count"></div>
 
@@ -964,7 +860,21 @@
     </div>
 
     <notes>
+      * The project uses a Core Audio OctoMic for 2nd-order ambisonic recording and Resonance Audio SDK for spatial
+      audio processing
 
+      * Built with React and Tailwind CSS, utilizing smartphone GPS for location tracking and gyroscope/accelerometer
+      for body-oriented listening
+
+      * Key libraries include:
+      - Omnitone for ambisonic audio handling
+      - Three.js for 3D calculations
+      - Turf.js for geospatial analysis
+      - rLayers for map functionality
+
+      * Follows frugal innovation principles by leveraging existing smartphone sensors and web technologies
+
+      * Creates hybrid spaces by combining proximal soundscapes with users' physical locations
     </notes>
     <div class="slide-count"></div>
 
@@ -976,8 +886,7 @@
 
     <notes>
       In addition to using the ambisonic recordings in the Resonant Landscapes app, DSU faculty and students composed
-      works
-      that premiered during a public concert at the Madison Area Arts Council.
+      works that premiered during a public concert at the Madison Area Arts Council.
     </notes>
     <div class="slide-count"></div>
 
@@ -990,8 +899,7 @@
 
     <notes>
       In addition to using the ambisonic recordings in the Resonant Landscapes app, DSU faculty and students composed
-      works
-      that premiered during a public concert at the Madison Area Arts Council.
+      works that premiered during a public concert at the Madison Area Arts Council.
     </notes>
     <div class="slide-count"></div>
 
@@ -1003,8 +911,7 @@
 
     <notes>
       In addition to using the ambisonic recordings in the Resonant Landscapes app, DSU faculty and students composed
-      works
-      that premiered during a public concert at the Madison Area Arts Council.
+      works that premiered during a public concert at the Madison Area Arts Council.
     </notes>
     <div class="slide-count"></div>
 
@@ -1068,14 +975,9 @@
       </iframe>
     </div>
     <notes>
-      The work I composed for this concert was
-      a
-      multi-channel fixed media piece, “Veins of the Earth,” which explores geophonic and biophonic sounds to evoke a
-      sense of
-      connection between natural environments and the
-      life they sustain. This concert brought together the DSU and wider community to showcase the work of Digital Arts
-      and
-      Design students and faculty and promote engagement with the app.
+      The work I composed for this concert was a multi-channel fixed media piece, “Veins of the Earth,” which explores
+      geophonic and biophonic sounds to evoke a sense of connection between natural environments and the life they
+      sustain.
     </notes>
     <div class="slide-count"></div>
 
@@ -1099,14 +1001,10 @@
     <notes>
       My future research focuses on creating the DSU Digital Sound Archive, a project designed to capture the ecological
       soundscapes and cultural heritage of South Dakota and nearby regions. By integrating advanced field recording
-      techniques
-      and metadata, the archive will support interdisciplinary research across sound studies, ecology, and digital arts.
-      A key
-      component of the project is the Resonant Landscapes app, which uses GPS technology to overlay soundscapes onto
-      physical
-      locations, enhancing public engagement and ecological awareness. This initiative aligns with DSU's mission to
-      expand
-      research opportunities and foster collaboration across disciplines.
+      techniques and metadata, the archive will support interdisciplinary research across sound studies, ecology, and
+      digital arts. A key component of the project is the Resonant Landscapes app, which uses GPS technology to overlay
+      soundscapes onto physical locations, enhancing public engagement and ecological awareness. This initiative aligns
+      with DSU's mission to expand research opportunities and foster collaboration across disciplines.
     </notes>
     <div class="slide-count"></div>
 
